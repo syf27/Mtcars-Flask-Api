@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 
 dataset = pd.read_csv('../scripts/mtcars.csv', header=0)
 y = dataset.loc[:, dataset.columns == 'mpg']
-x = dataset.loc[:, ['hp', 'cyl', 'disp']]
+x = dataset.loc[:, ["cyl", "disp", "hp", "drat", "wt", "qsec", "gear"]]
 print(x.head())
 print(y.head())
 
@@ -19,4 +19,4 @@ def predict(dict_values, col_imp=x.columns, model=model_lr):
     return y_pred
 
 
-# print(predict({"hp": "160", "cyl": "4", "disp": "160"}))
+

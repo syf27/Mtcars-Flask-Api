@@ -22,10 +22,8 @@ The server is up.
 
 **3. To predict MPG, we will pass these through a json formatted input through a curl POST request to the API. This is done as**
 
-`curl -H "Content-Type: application/json" -X POST -d 
-'{"hp":"160", "cyl":"4", "disp":"160"}' 
-"http://localhost:5000/predict_mpg"`
+`curl -H "Content-Type: application/json" -X POST -d '{"cyl":"6","disp":"200","hp":"220","drat":"4.2","wt":"2.5","qsec":"12","gear":"2"}' "http://localhost:5000/predict_mpg"}' 
 
-his should return { "predict mpg": 23.91245218040652 }
+his should return { "predict mpg": 16.30032090294849 }
 
 You can change some of the values to see the prediction change. To stop your server running the API, type `ctrl-C`. As usual, check to see if you have any docker containers running using `docker container ls` and stop them through `docker container kill <container-name>`
